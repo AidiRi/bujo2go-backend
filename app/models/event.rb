@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :collection
+  has_one :collection
   belongs_to :user
+
 end
