@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     users = User.all
     render json: users
@@ -6,8 +7,8 @@ class UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    
-    render json: user
+
+    render json: user, include: [:tasks, :notes, :events, :habits]
   end
 
   def create

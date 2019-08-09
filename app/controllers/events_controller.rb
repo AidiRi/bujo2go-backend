@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
+
   def index
-    events = Event.all
+    events = Event.where("user_id = ?", params[:user_id])
     render json: events
   end
 

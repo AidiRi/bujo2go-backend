@@ -1,6 +1,7 @@
 class CollectionsController < ApplicationController
   def index
-    collections = Collection.all
+    all_collections = Collection.all
+
     render json: collections, include: [:tasks, :notes, :events]
   end
 
