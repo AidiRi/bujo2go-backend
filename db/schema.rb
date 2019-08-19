@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_08_190317) do
+ActiveRecord::Schema.define(version: 2019_08_19_202348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_08_08_190317) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "item_type"
     t.index ["collection_id"], name: "index_events_on_collection_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_08_08_190317) do
     t.bigint "collection_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "item_type"
     t.index ["collection_id"], name: "index_notes_on_collection_id"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_08_08_190317) do
     t.bigint "collection_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "item_type"
     t.index ["collection_id"], name: "index_tasks_on_collection_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
